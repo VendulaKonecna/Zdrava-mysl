@@ -1,0 +1,25 @@
+@use '../base/colors' as c;
+
+.hero {
+    width: 100%;
+    height: 300px;
+    background-color: c.$c-2;
+    margin-bottom: 50px;
+}
+.hero-img {
+    width: 100%;
+    height: 250px;
+    background-image: url(/images/hero-img.svg);
+    background-size: cover;
+    background-position: center;
+   
+}
+
+.hero-text {
+    font-family: "Sedan", serif;
+    font-style: italic;
+    font-size: 20px;
+    color: c.$c-font-sec;
+    text-align: center;
+    padding-top: 25px;
+}

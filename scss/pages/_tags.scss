@@ -1,0 +1,32 @@
+@use '../base/colors' as c;
+
+.tags {
+    margin-bottom: 30px;
+}
+.tags__list {
+    list-style: none;
+	padding: 0;
+	display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+.tags__item{
+    background-color: c.$c-2;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+.tags__link {
+    display: inline-block;
+    font-size: 14px;
+    text-decoration: none;
+    color: c.$c-font; 
+    
+    &:hover,
+    &:active {
+        color: c.$c-font-sec;
+    }
+}
+
+.tags p {
+    margin-bottom: 10px;
+}

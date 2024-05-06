@@ -1,0 +1,44 @@
+@use '../base/colors' as c;
+
+.breadcrumbs{
+    list-style-type: none;
+    margin: 0;
+    margin-bottom: 30px;
+    padding: 0 15px;
+    color: c.$c-font-sec;
+    font-size: 12px;
+  }
+  
+  .breadcrumbs__item {
+    display: inline-block;
+    position: relative;
+    padding-right: 20px;
+    margin: 0;
+  
+    &:after {
+      content: '>';
+      position: absolute;
+      display: inline-block;
+      right: -5px;
+      width: 2em;
+      text-align: center;
+    }
+    &:last-child {
+    font-weight: bold;
+    }
+    &:last-child:after {
+      content: '';
+    }
+  }
+
+  .breadcrumbs__link {
+    text-decoration: none;
+    display: inline-block;
+    color: c.$c-1;
+    white-space: nowrap;
+
+    &:hover {
+      text-decoration: underline;
+    }
+}
+  

@@ -1,0 +1,47 @@
+@use '../base/colors' as c;
+
+
+.article__link {
+    text-decoration: none;
+    color: c.$c-font;
+}
+.article-wrapp {
+    max-width: 450px;
+    border: 1px solid c.$c-1;
+    border-radius: 8px;    
+}
+
+.article__img--wrap {
+    max-width: 100%;
+    border-radius: 8px 8px 0 0;
+}
+
+.article__content--wrap {
+    padding: 16px;
+    border: 1px solid c.$c-1;
+    border-radius: 0 0 8px 8px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    gap: 10px;
+}
+
+.article__heading--wrapp {
+    padding-bottom: 10px;
+    font-size: 20px;
+}
+
+.article__text--wrapp {
+    color: c.$c-font-sec;
+}
+
+.article__more {
+    background-color: c.$c-2;
+    padding: 5px;
+    border-radius: 5px;
+    display: inline-block;
+    font-size: 14px;
+    text-decoration: none;
+    color: c.$c-font;
+    justify-self: end;
+}

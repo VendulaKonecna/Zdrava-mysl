@@ -1,0 +1,18 @@
+@use '../base/colors' as c;
+
+html { box-sizing: border-box;}  
+*, ::before, ::after { box-sizing: inherit; }
+* {  
+  padding: 0;
+  margin: 0;
+}
+
+body {
+    background-color: c.$c-background;
+    color: c.$c-font;
+    font-family: "Poppins", sans-serif;
+}
+
+.container {
+  padding: 20px;
+}
