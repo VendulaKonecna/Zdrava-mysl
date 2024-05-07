@@ -1,0 +1,9 @@
+@use '../base/colors' as c;
+
+.not-found {
+    max-width: 450px;
+    height: 450px;
+    background-image: url(/images/404-error.svg);
+    background-size: cover;
+    background-position: center;
+}

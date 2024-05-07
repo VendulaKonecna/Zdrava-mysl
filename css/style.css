@@ -18,7 +18,7 @@ body {
 }
 
 .container {
-  padding: 20px;
+  padding: 0 20px;
 }
 
 .grid {
@@ -26,6 +26,21 @@ body {
   margin: 0 auto;
   display: grid;
   grid-template-columns: 1fr;
+}
+
+.back {
+  margin-right: 20px;
+  justify-self: end;
+}
+
+.back__btn {
+  background-color: hsl(106, 31%, 19%);
+  padding: 5px;
+  border-radius: 5px;
+  display: inline-block;
+  font-size: 14px;
+  text-decoration: none;
+  color: hsl(14, 100%, 83%);
 }
 
 .header {
@@ -179,9 +194,7 @@ body {
 
 .breadcrumbs {
   list-style-type: none;
-  margin: 0;
-  margin-bottom: 30px;
-  padding: 0 15px;
+  margin: 30px 10px;
   color: hsl(14, 100%, 87%);
   font-size: 12px;
 }
@@ -288,9 +301,59 @@ body {
   background-color: hsl(106, 31%, 19%);
   padding: 5px;
   border-radius: 5px;
-  display: inline-block;
   font-size: 14px;
   text-decoration: none;
   color: hsl(14, 100%, 83%);
   justify-self: end;
+}
+
+.article {
+  max-width: 900px;
+}
+
+.article__img {
+  max-width: 100%;
+  margin-bottom: 15px;
+}
+
+.article__content {
+  margin: 0 10px 20px 10px;
+}
+
+.article__heading,
+.article__heading3 {
+  margin-bottom: 10px;
+}
+
+.article__text {
+  color: hsl(14, 100%, 87%);
+  margin-bottom: 10px;
+  font-family: "Sedan", serif;
+}
+
+.not-found {
+  max-width: 450px;
+  height: 450px;
+  background-image: url(/images/404-error.svg);
+  background-size: cover;
+  background-position: center;
+}
+
+.contact__link {
+  background-color: hsl(106, 31%, 19%);
+  padding: 10px;
+  border-radius: 5px 5px 0 0;
+  font-size: 14px;
+  color: hsl(14, 100%, 83%);
+  display: block;
+}
+
+.contact__content {
+  border: 0.7px solid hsl(14, 100%, 87%);
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.contact__content p {
+  padding: 10px;
 }/*# sourceMappingURL=style.css.map */

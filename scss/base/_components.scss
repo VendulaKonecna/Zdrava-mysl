@@ -1,0 +1,16 @@
+@use '../base/colors' as c;
+
+
+.back {
+    margin-right: 20px;
+    justify-self: end;
+}
+.back__btn {
+    background-color: c.$c-2;
+    padding: 5px;
+    border-radius: 5px;
+    display: inline-block;
+    font-size: 14px;
+    text-decoration: none;
+    color: c.$c-font;   
+}

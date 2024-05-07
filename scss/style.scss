@@ -1,5 +1,6 @@
 @use 'base/base';
 @use 'layout/grid';
+@use 'base/components';
 
 @use 'layout/header';
 @use 'layout/hero';
@@ -8,3 +9,8 @@
 @use 'layout/breadcrumbs';
 @use 'pages/tags';
 @use 'pages/articles-wrapp';
+
+@use 'pages/article';
+@use 'pages/error';
+
+@use 'pages/contact';

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> {{ title }} </title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="/css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Sedan:ital@0;1&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -13,7 +13,9 @@
 
         <!-- HEADER/MENU -->
         <header class="header">
-            <h1 class="logo">Zdravá mysl</h1>
+            <a class="home" href="/">
+                <h1 class="logo">Zdravá mysl</h1>
+            </a>
 
             <nav class="menu"> 
                 <input class="menu__checkbox" type="checkbox" id="menu-checkbox">
@@ -24,9 +26,9 @@
                     </div>
             
                 <ul class="menu__list">
-                    <li class="menu__item"><a href="clanky.html" class="menu__link">Články a rozhovory</a></li>
-                    <li class="menu__item"><a href="o-nas.html" class="menu__link">O nás</a></li>
-                    <li class="menu__item"><a href="#kontakty" class="menu__link">Kontakty</a></li>
+                    <li class="menu__item"><a href="/clanky/" class="menu__link">Články a rozhovory</a></li>
+                    <li class="menu__item"><a href="/o-nas/" class="menu__link">O nás</a></li>
+                    <li class="menu__item"><a href="/kontakty/" class="menu__link">Kontakty</a></li>
                 </ul>
             </nav>  
         </header>
@@ -34,8 +36,8 @@
         {{ content | safe }}
 
         <footer class="footer">
-                <p>© 2024, Konečná Vendula </p>
-                <a href="https://www.freepik.com/free-vector/flat-world-mental-health-day-background_31151378.htm#from_view=detail_alsolike">Image by freepik</a>
+            <p>© 2024, Konečná Vendula </p>
+            <a href="https://www.freepik.com/free-vector/flat-world-mental-health-day-background_31151378.htm#from_view=detail_alsolike">Image by freepik</a>
         </footer>
     </div>    
 
