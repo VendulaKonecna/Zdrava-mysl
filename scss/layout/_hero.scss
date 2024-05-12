@@ -1,25 +1,30 @@
 @use '../base/colors' as c;
 
 .hero {
+    padding-top: 80px;
+}
+.hero__img {
     width: 100%;
     height: 300px;
-    background-color: c.$c-2;
-    margin-bottom: 50px;
-}
-.hero-img {
-    width: 100%;
-    height: 250px;
     background-image: url(/images/hero-img.svg);
     background-size: cover;
     background-position: center;
-   
+    margin-bottom: 50px;
 }
-
-.hero-text {
-    font-family: "Sedan", serif;
-    font-style: italic;
-    font-size: 20px;
+.hero__title {
+    font-size: 36px;
     color: c.$c-font-sec;
     text-align: center;
-    padding-top: 25px;
+    padding-bottom: 25px;
+}
+.hero__content {
+    padding-inline: 20px;
+
+    @media screen and (min-width: 900px){
+         padding-top: 100px;
+    }
+   
+}
+.hero__content p {
+    padding-bottom: 10px;
 }

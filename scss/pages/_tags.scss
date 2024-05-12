@@ -1,7 +1,13 @@
 @use '../base/colors' as c;
 
 .tags {
-    margin-bottom: 30px;
+    margin-block: 30px;
+    padding-inline: 20px;
+    
+}
+.tags p {
+    font-family: "Poppins", sans-serif;
+    color: c.$c-font-sec;
 }
 .tags__list {
     list-style: none;
@@ -25,8 +31,4 @@
     &:active {
         color: c.$c-font-sec;
     }
-}
-
-.tags p {
-    margin-bottom: 10px;
 }

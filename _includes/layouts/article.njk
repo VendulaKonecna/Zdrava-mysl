@@ -1,0 +1,43 @@
+---
+layout: layouts/template.njk
+---
+
+<!--BREADSCRUMBS-->
+<nav class="breadcrumbs container">
+    <ul class="breadcrumbs__list">
+        <li class="breadcrumbs__item" ><a class="breadcrumbs__link" href="/">Domů</a></li><!--
+        --><li class="breadcrumbs__item" ><a class="breadcrumbs__link" href="/clanky/">Články</a></li><!--
+        --><li class="breadcrumbs__item"> {{ title }} </li>
+    </ul>
+</nav>
+
+<article class="article">
+ 
+    <img class="article__img" src="/images/{{img}}"  alt="{{alt}}">
+
+    <div class="article__content" >
+
+        <h2 class="article__title"> {{ title }} </h2>
+        <p class="article__perex"> {{ perex }} </p>
+
+        {{ content | safe }}
+
+        {% if in collections !== prispevek  %}
+
+        <div class="not-found"></div>
+        <p class="container">Na toto téma zatím nebyl napsaný žádný článek.</p>
+        
+        <div class="back">
+            <a href="/clanky/" class="back__btn">Zpět</a>
+        </div>
+
+        {% endif %}
+
+    </div>
+
+  
+
+</article>  
+
+
+{% include 'partials/btn.njk' %}

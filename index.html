@@ -4,7 +4,39 @@ title: Zdravá mysl
 ---
 
 <!-- HERO -->
-<div class="hero">
-    <p class="hero-text">Žádný problém není příliš malý!</p>
-    <div class="hero-img"></div>
+<main class="grid__hero">
+    <div class="hero">
+        <div class="hero__img"></div>
+    </div>
+    <section class="hero__content">
+        <h2 class="hero__title">Žádný problém není příliš malý!</h2>
+        <p>Tady nejsme jenom kvůli velkým problémům. Každý den se potýkáme s různými výzvami, ať už je to školní stres, kamarádské drama nebo ta zatracená matematika. Ale víš co? Není to jen tvůj problém. Nikdy nejsi sám. </p>
+        <p>Naše stránka je plná tipů, triků a příběhů od lidí, kteří taky procházeli tím samým. Chceme ti ukázat, že malé problémy jsou taky důležité a že nemusíš to všechno řešit sám. Máme tu pro tebe rady, jak se vyrovnat s emocemi, jak se uklidnit a jak najít podporu.</p>
+        <p>Pokud máš nějaký dotaz nebo chceš sdílet svůj příběh, neváhej se ozvat. Jsme tu pro tebe!</p>
+    </section>
+</main>
+
+<div class="articles__container">
+    <h3>Nejnovější články</h3>
+
+    <div class="articles__new">
+        {% for prispevek in collections.clanky | reverse | limit(4) %}
+
+        <div class="article--wrapp">
+            <a href="{{ prispevek.url }}" class="article__link">
+                <img src="/images/{{ prispevek.data.img }}" class="article__img--wrap" alt="{{ prispevek.data.alt }}">
+                <div class="article__content--wrap">
+                    <div class="article__text--wrap">
+                        <h2 class="article__heading--wrapp"> {{ prispevek.data.title }} </h2>
+                        <p class="article__perex"> {{ prispevek.data.perex }}</p>
+                    </div>
+                    <div class="article__more">
+                        <a href="{{ prispevek.url }}" class="article__more">Pokračovat ve čtení</a>
+                    </div>
+                </div>
+            </a> 
+        </div>
+        
+        {% endfor %}
+    </div>
 </div>

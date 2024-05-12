@@ -1,0 +1,33 @@
+---
+layout: layouts/template.njk
+---
+<div class="container">
+    <!--BREADSCRUMBS-->
+    <nav class="breadcrumbs">
+        <ul class="breadcrumbs__list">
+            <li class="breadcrumbs__item" ><a class="breadcrumbs__link" href="/">Domů</a></li><!--
+            --><li class="breadcrumbs__item"> {{ title }} </li>
+        </ul>
+    </nav>
+
+    <!--TAGS-->
+    <section class="tags">
+        <ul class="tags__list">
+            <li class="tags__item"><a href="/tags/rozhovory/" class="tags__link">Rozhovory</a></li><!--
+            --><li class="tags__item"><a href="/tags/co-delat-kdyz/" class="tags__link">Co dělat, když ...</a></li><!--
+            --><li class="tags__item"><a href="/tags/dusevni-zdravi/" class="tags__link">Duševní zdraví</a></li><!--
+            --><li class="tags__item"><a href="/tags/dusevni-onemocneni/" class="tags__link">Duševní onemocnění</a></li><!--
+            --><li class="tags__item"><a href="/tags/psychohygiena/" class="tags__link">Psychohygiena</a></li><!--
+            --><li class="tags__item"><a href="/tags/joga/" class="tags__link">Jóga</a></li><!--
+            --><li class="tags__item"><a href="/tags/dechova-cviceni/" class="tags__link">Dechová cvičení</a></li><!--
+            --><li class="tags__item"><a href="/tags/emoce/" class="tags__link">Emoce</a></li>
+        </ul>
+    </section>
+
+    <!--ARTICLES-->
+    <section class="grid__cards">
+            
+        {{ content | safe }}
+
+    </section>
+</div>

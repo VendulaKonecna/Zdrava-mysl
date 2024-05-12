@@ -1,0 +1,21 @@
+---
+layout: layouts/articles.njk
+title: Jóga
+---
+
+{% for prispevek in collections.joga | reverse %}
+
+<div class="article--wrapp">
+    <a href="{{ prispevek.url }}" class="article__link">
+        <img src="/images/{{ prispevek.data.img }}" class="article__img--wrap" alt="{{ prispevek.data.alt }}">
+        <div class="article__content--wrap">
+            <h2 class="article__heading--wrapp"> {{ prispevek.data.title }} </h2>
+            <p class="article__perex"> {{ prispevek.data.perex }}... </p>
+            <div class="article__more">
+                <a href="{{ prispevek.url }}" class="article__more">Pokračovat ve čtení</a>
+            </div>
+        </div>
+    </a> 
+</div>
+
+{% endfor %}

@@ -1,44 +1,23 @@
 ---
-layout: layouts/template.njk
+layout: layouts/articles.njk
 title: Články a rozhovory
 ---
 
-<div class="container">
-    
-    <!--BREADSCRUMBS-->
-    <nav class="breadcrumbs">
-        <ul class="breadcrumbs__list">
-            <li class="breadcrumbs__item" ><a class="breadcrumbs__link" href="/">Domů</a></li><!--
-            --><li class="breadcrumbs__item">Články a rozhovory</li>
-        </ul>
-    </nav>
+{% for prispevek in collections.clanky | reverse %}
 
-    <!--TAGS-->
-    <section class="tags">
-        <ul class="tags__list">
-            <li class="tags__item"><a href="#rozhovory" class="tags__link">Rozhovory</a></li><!--
-            --><li class="tags__item"><a href="#" class="tags__link">Co dělat, když ...</a></li><!--
-            --><li class="tags__item"><a href="#" class="tags__link">Duševní zdraví</a></li><!--
-            --><li class="tags__item"><a href="#" class="tags__link">Duševní onemocnění</a></li><!--
-            --><li class="tags__item"><a href="#" class="tags__link">Psychohygiena</a></li><!--
-            --><li class="tags__item"><a href="#" class="tags__link">Jóga</a></li><!--
-            --><li class="tags__item"><a href="#rozhovory" class="tags__link">Dechová cvičení</a></li><!--
-            --><li class="tags__item"><a href="/clanky/nenalezeno/" class="tags__link">Emoce</a></li>
-        </ul>
-    </section>
-
-    <!--ARTICLES-->
-    <!-- <a href="jak-zvladnout-panickou-ataku.html" class="article__link"> -->
-    <div class="article--wrapp">
-        <img src="/images/anxiety.jpg" class="article__img--wrap" alt="panická ataka"><!--
-        --><div class="article__content--wrap">
-            <h2 class="article__heading--wrapp">Jak zvládnout panickou ataku</h2>
-            <p class="article__text--wrapp">Panická ataka je náhlý příval intenzivního strachu a úzkosti, který může být doprovázen fyzickými symptomy, jako je bušení srdce, dušnost, závratě, pocení nebo třes. Může se zdát, že umíráte, ...</p>
+<div class="article--wrapp">
+    <a href="{{ prispevek.url }}" class="article__link">
+        <img src="/images/{{ prispevek.data.img }}" class="article__img--wrap" alt="{{ prispevek.data.alt }}">
+        <div class="article__content--wrap">
+            <div class="article__text--wrap">
+                <h2 class="article__heading--wrapp"> {{ prispevek.data.title }} </h2>
+                <p class="article__perex"> {{ prispevek.data.perex }}</p>
+            </div>
             <div class="article__more">
-                <a href="/clanky/jak-zvladnout-panickou-ataku/" class="article__more">Pokračovat ve čtení</a>
+                <a href="{{ prispevek.url }}" class="article__more">Pokračovat ve čtení</a>
             </div>
         </div>
-    </div>
-    <!-- </a> -->
-
+    </a>  
 </div>
+
+{% endfor %}
