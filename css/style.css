@@ -34,6 +34,10 @@ a {
   color: hsl(14, 100%, 87%);
 }
 
+p {
+  margin-bottom: 10px;
+}
+
 .header {
   width: 100%;
   background-color: hsl(111, 25%, 10%);
@@ -451,6 +455,9 @@ a {
   color: hsl(14, 100%, 83%);
   display: block;
 }
+.contact__link:hover {
+  color: hsl(14, 100%, 87%);
+}
 
 .contact__content {
   border: 0.7px solid hsl(14, 100%, 87%);
@@ -460,6 +467,109 @@ a {
 
 .contact__content p {
   padding: 10px;
+}
+
+/*@media screen and (min-width: 900px) {
+    .contact {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        grid-template-rows: auto 1fr;
+        gap: 20px;
+    }
+
+}*/
+.contact {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr auto;
+  gap: 10px;
+}
+
+.web,
+.app,
+.help {
+  display: none;
+}
+
+.web__checkbox {
+  opacity: 0;
+  grid-column: 1/-1;
+  grid-row: 1/2;
+  justify-self: start;
+  z-index: 2;
+  width: 200px;
+}
+.web__checkbox:checked ~ .web {
+  display: block;
+  grid-column: 1/-1;
+  grid-row: 2/3;
+}
+
+.app__checkbox {
+  opacity: 0;
+  grid-column: 1/-1;
+  grid-row: 3/4;
+  justify-self: start;
+  z-index: 2;
+  width: 200px;
+}
+.app__checkbox:checked ~ .app {
+  display: block;
+  grid-column: 1/-1;
+  grid-row: 4/5;
+}
+
+.help__checkbox {
+  opacity: 0;
+  grid-column: 1/-1;
+  grid-row: 5/6;
+  justify-self: start;
+  z-index: 2;
+  width: 200px;
+}
+.help__checkbox:checked ~ .help {
+  display: block;
+  grid-column: 1/-1;
+  grid-row: 6/7;
+}
+
+.btn-web {
+  background-color: hsl(106, 31%, 19%);
+  padding: 10px;
+  border-radius: 5px;
+  display: inline-block;
+  font-size: 14px;
+  text-decoration: none;
+  color: hsl(14, 100%, 83%);
+  grid-column: 1/-1;
+  grid-row: 1/2;
+  z-index: 1;
+}
+
+.btn-app {
+  background-color: hsl(106, 31%, 19%);
+  padding: 10px;
+  border-radius: 5px;
+  display: inline-block;
+  font-size: 14px;
+  text-decoration: none;
+  color: hsl(14, 100%, 83%);
+  grid-column: 1/-1;
+  grid-row: 3/4;
+  z-index: 1;
+}
+
+.btn-help {
+  background-color: hsl(106, 31%, 19%);
+  padding: 10px;
+  border-radius: 5px;
+  display: inline-block;
+  font-size: 14px;
+  text-decoration: none;
+  color: hsl(14, 100%, 83%);
+  grid-column: 1/-1;
+  grid-row: 5/6;
+  z-index: 1;
 }
 
 .grid {

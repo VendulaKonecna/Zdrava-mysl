@@ -7,6 +7,10 @@
     font-size: 14px;
     color: c.$c-font;
     display: block;
+
+    &:hover {
+        color: c.$c-font-sec;
+    }
 }
 
 .contact__content {
@@ -16,4 +20,108 @@
 }
 .contact__content p {
     padding: 10px;   
+}
+
+/*@media screen and (min-width: 900px) {
+    .contact {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        grid-template-rows: auto 1fr;
+        gap: 20px;
+    }
+
+}*/
+
+.contact {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr auto;
+    gap: 10px;
+}
+
+.web,
+.app,
+.help {
+    display: none;
+}
+
+.web__checkbox {
+    opacity: 0;
+    grid-column: 1 / -1;
+    grid-row: 1 / 2;
+    justify-self: start;
+    z-index: 2;
+    width: 200px;
+
+    &:checked ~ .web {
+        display: block;
+        grid-column: 1 / -1;
+        grid-row: 2 / 3;
+    }
+}
+
+.app__checkbox {
+    opacity: 0;
+    grid-column: 1 / -1;
+    grid-row: 3 / 4;
+    justify-self: start;
+    z-index: 2;
+    width: 200px;
+
+    &:checked ~ .app {
+        display: block;
+        grid-column: 1 / -1;
+        grid-row: 4 / 5;
+    }
+}
+.help__checkbox {
+    opacity: 0;
+    grid-column: 1 / -1;
+    grid-row: 5 / 6;
+    justify-self: start;
+    z-index: 2;
+    width: 200px;
+
+    &:checked ~ .help {
+        display: block;
+        grid-column: 1 / -1;
+        grid-row: 6 / 7;
+    }
+}
+
+.btn-web {
+    background-color: c.$c-2;
+    padding: 10px;
+    border-radius: 5px;
+    display: inline-block;
+    font-size: 14px;
+    text-decoration: none;
+    color: c.$c-font; 
+    grid-column: 1 / -1;
+    grid-row: 1 / 2;
+    z-index: 1;
+}
+.btn-app {
+    background-color: c.$c-2;
+    padding: 10px;
+    border-radius: 5px;
+    display: inline-block;
+    font-size: 14px;
+    text-decoration: none;
+    color: c.$c-font; 
+    grid-column: 1 / -1;
+    grid-row: 3 / 4;
+    z-index: 1;
+}
+.btn-help {
+    background-color: c.$c-2;
+    padding: 10px;
+    border-radius: 5px;
+    display: inline-block;
+    font-size: 14px;
+    text-decoration: none;
+    color: c.$c-font; 
+    grid-column: 1 / -1;
+    grid-row: 5 / 6;
+    z-index: 1;
 }
