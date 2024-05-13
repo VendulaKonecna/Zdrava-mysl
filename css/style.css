@@ -447,6 +447,10 @@ p {
   background-position: center;
 }
 
+.box {
+  grid-column: 1/-1;
+}
+
 .contact__link {
   background-color: hsl(106, 31%, 19%);
   padding: 10px;

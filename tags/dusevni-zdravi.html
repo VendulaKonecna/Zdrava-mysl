@@ -3,6 +3,8 @@ layout: layouts/articles.njk
 title: Duševní zdraví
 ---
 
+{% if collections.zdravi.length %}
+
 {% for prispevek in collections.zdravi | reverse %}
 
 <div class="article--wrapp">
@@ -19,3 +21,9 @@ title: Duševní zdraví
 </div>
 
 {% endfor %}
+
+{% else %}
+
+    {% include 'partials/not-found.njk' %}	
+
+{% endif %}

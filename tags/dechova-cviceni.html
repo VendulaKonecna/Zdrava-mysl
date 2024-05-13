@@ -3,6 +3,8 @@ layout: layouts/articles.njk
 title: Dechová cvičení
 ---
 
+{% if coolections.dech.length %}
+
 {% for prispevek in collections.dech | reverse %}
 
 <div class="article--wrapp">
@@ -19,3 +21,9 @@ title: Dechová cvičení
 </div>
 
 {% endfor %}
+
+{% else %}
+
+    {% include 'partials/not-found.njk' %}	    
+
+{% endif %}

@@ -3,6 +3,8 @@ layout: layouts/articles.njk
 title: Psychohygiena
 ---
 
+{% if collections.psychohygiena.length %}
+
 {% for prispevek in collections.psychohygiena | reverse %}
 
 <div class="article--wrapp">
@@ -19,3 +21,9 @@ title: Psychohygiena
 </div>
 
 {% endfor %}
+
+{% else %}
+
+    {% include 'partials/not-found.njk' %}	
+
+{% endif %}

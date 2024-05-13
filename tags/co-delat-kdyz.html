@@ -3,6 +3,8 @@ layout: layouts/articles.njk
 title: Co dělat, když ...
 ---
 
+{% if collections.codelat.length %}
+
 {% for prispevek in collections.codelat | reverse %}
 
 <div class="article--wrapp">
@@ -19,3 +21,9 @@ title: Co dělat, když ...
 </div>
 
 {% endfor %}
+
+{% else %}
+
+    {% include 'partials/not-found.njk' %}	
+
+{% endif %}

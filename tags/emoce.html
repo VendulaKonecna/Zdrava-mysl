@@ -2,6 +2,7 @@
 layout: layouts/articles.njk
 title: Emoce
 ---
+{% if collections.emoce.length %}
 
 {% for prispevek in collections.emoce | reverse %}
 
@@ -18,3 +19,9 @@ title: Emoce
     </a> 
 </div>
 {% endfor %}
+
+{% else %}
+
+    {% include 'partials/not-found.njk' %}	
+
+{% endif %}

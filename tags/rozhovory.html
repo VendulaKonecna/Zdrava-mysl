@@ -3,6 +3,8 @@ layout: layouts/articles.njk
 title: Rozhovory
 ---
 
+{% if collections.rozhovory.length %}
+
 {% for prispevek in collections.rozhovory | reverse %}
 
 <div class="article--wrapp">
@@ -18,3 +20,9 @@ title: Rozhovory
     </a> 
 </div>
 {% endfor %}
+
+{% else %}
+
+    {% include 'partials/not-found.njk' %}	
+
+{% endif %}
