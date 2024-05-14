@@ -12,22 +12,45 @@ layout: layouts/template.njk
 </nav>
 
 <article class="article">
- 
-    <img class="article__img" src="/images/{{img}}"  alt="{{alt}}">
 
+    <div class="img">
+        <img class="article__img" src="/images/{{img}}"  alt="{{alt}}">
+    </div>
+    
     <div class="article__content" >
-
         <h2 class="article__title"> {{ title }} </h2>
         <p class="article__perex"> {{ perex }} </p>
+    </div>
 
+    <div class="article__text">
         {{ content | safe }}
 
-        
-    </div>    
+        {% include 'partials/btn.njk' %}  
+    </div>
 
-  
+
+    <aside class="articles__new aside">
+        <p>Nejnovější články</p>
+        {% for prispevek in collections.clanky | reverse | limit(3) %}
+
+        <div class="article--wrapp">
+            <a href="{{ prispevek.url }}" class="article__link">
+                <img src="/images/{{ prispevek.data.img }}" class="article__img--wrap" alt="{{ prispevek.data.alt }}">
+                <div class="article__content--wrap">
+                    <div class="article__text--wrap">
+                        <h2 class="article__heading--wrapp"> {{ prispevek.data.title }} </h2>
+                        <p class="article__perex"> {{ prispevek.data.perex }}</p>
+                    </div>
+                    <div class="article__more">
+                        <a href="{{ prispevek.url }}" class="article__more">Pokračovat ve čtení</a>
+                    </div>
+                </div>
+            </a> 
+        </div>
+        
+        {% endfor %}
+    </aside>
 
 </article>  
 
 
-{% include 'partials/btn.njk' %}
