@@ -3,11 +3,12 @@
 
 .article {
     max-width: 900px;
+    margin: 0 auto;
 
     @media screen and (min-width: 580px) {
         max-width: 1040px;
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-columns: 3fr 1fr 1fr 1fr;
         grid-template-rows: 1fr auto;
     }
 }
@@ -32,11 +33,11 @@
 }
 
 .article__text {
-    padding: 20px;
+    
     @media screen and (min-width: 580px) {
         grid-column: 1 / -1;
         grid-row: auto;
-        margin-inline: 40px;
+        padding-left: 30px;
     }
 
     @media screen and (min-width: 900px) {
@@ -44,15 +45,22 @@
     }
 }
 
-.aside {
+.right {
     display: none;
 
     @media screen and (min-width: 900px) {
-    display: grid;
+    grid-column: 4 / -1;
+    display: block;
     max-width: 250px;
     justify-self: end;
+    }
 }
+
+.aside {    
+    display: grid;
+    gap: 20px;    
 }
+
 
 .article__text p,
 .article__text h3,
@@ -62,11 +70,11 @@
 }
 .article__text p {
     font-family: "Lora", serif;
-    font-size: 14px;
+    font-size: 16px;
 }
 .article__text .article__perex {
     font-family: "Poppins", sans-serif;
-    font-size: 16px;
+    font-size: 18px;
 }
 .article__text a {
     font-family: "Poppins", sans-serif;
@@ -74,9 +82,10 @@
 }
 .article__text li {
     font-family: "Lora", serif;
-    font-size: 14px;
+    font-size: 16px;
 }
-.article__text ul {
+.article__text ul,
+.article__text ol {
     padding-inline: 20px;
 }
 .onas p {
