@@ -45,7 +45,7 @@ S trochou cvičení se dýchací techniky stanou vašim cenným pomocníkem v bo
 <section class="tags">
     <p>Více článků na téma:</p>
     <ul class="tags__list">
-        <li class="tags__item"><a href="/tags/dech/" class="tags__link">Dechová cvičení</a></li><!--
+        <li class="tags__item"><a href="/tags/dechova-cviceni/" class="tags__link">Dechová cvičení</a></li><!--
         --><li class="tags__item"><a href="/tags/psychohygiena/" class="tags__link">Psychohygiena</a></li>
     </ul>   
 </section>
