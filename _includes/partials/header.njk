@@ -16,9 +16,9 @@
                 </div>
       
             <ul class="menu__list">
-                <li class="menu__item"><a href="/clanky/" class="menu__link">Články a rozhovory</a></li>
-                <li class="menu__item"><a href="/o-nas/" class="menu__link">O nás</a></li>
-                <li class="menu__item"><a href="/kontakty/" class="menu__link">Kontakty</a></li>
+                <li class="menu__item {{ 'menu__item--active' if page.fileSlug === 'clanky' }}"><a href="/clanky/" class="menu__link">Články a rozhovory</a></li>
+                <li class="menu__item {{ 'menu__item--active' if page.fileSlug === 'o-nas' }}"><a href="/o-nas/" class="menu__link">O nás</a></li>
+                <li class="menu__item {{ 'menu__item--active' if page.fileSlug === 'kontakty' }}"><a href="/kontakty/" class="menu__link">Kontakty</a></li>
             </ul>
         </nav>
     </div>

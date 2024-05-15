@@ -125,6 +125,11 @@ border-bottom: 2px solid c.$c-2;
         }
     }
 }
+.menu__item--active {
+    border-bottom: 2px solid c.$c-font;
+    color: c.$c-font-sec;
+    background-color: c.$c-2;
+}
 .menu__link {
 display: block;
 text-decoration: none;

@@ -172,6 +172,12 @@ p {
   }
 }
 
+.menu__item--active {
+  border-bottom: 2px solid hsl(14, 100%, 83%);
+  color: hsl(14, 100%, 87%);
+  background-color: hsl(106, 31%, 19%);
+}
+
 .menu__link {
   display: block;
   text-decoration: none;
@@ -208,7 +214,12 @@ p {
 }
 @media screen and (min-width: 900px) {
   .hero__content {
-    padding-top: 100px;
+    padding-top: 140px;
+  }
+}
+@media screen and (min-width: 900px) {
+  .hero__content {
+    padding-top: 140px;
   }
 }
 
